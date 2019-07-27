@@ -19,6 +19,7 @@ graalVMNativeImageOptions ++= Seq(
   "--verbose",
   "--initialize-at-build-time",
   "--no-fallback",
+  "-H:ConfigurationFileDirectories=/Users/deanzhang/work/code/github/graalvm-akka/src/main/resources/"
 )
 
 mainClass in Compile := Some("graalvm.akka.Main")
