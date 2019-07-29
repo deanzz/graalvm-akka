@@ -1,6 +1,6 @@
 package graalvm.akka.actors
 
-import akka.actor.Actor
+import akka.actor.{Actor, Props}
 import graalvm.akka.actors.PingMan.Ping
 import graalvm.akka.actors.PongMan.Pong
 
@@ -37,4 +37,6 @@ class PongMan() extends Actor{
 
 object PongMan{
   case class Pong(s: String)
+
+  def props(): Props = Props(new PongMan())
 }
